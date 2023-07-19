@@ -21,4 +21,4 @@ echo '[NOTE] Launching application, this will fail if you did not build the proj
 echo '[NOTE] Remove the launcher folder to throw away local changes'
 echo '-------------------------------------------------------------------------------------------'
 
-java -jar target/dependency/org.apache.sling.feature.launcher.jar -f target/slingfeature-tmp/feature-app.json 
+java -agentlib:jdwp=transport=dt_socket,server=y,address=30303,suspend=n -jar target/dependency/org.apache.sling.feature.launcher.jar -f target/slingfeature-tmp/feature-app.json 
