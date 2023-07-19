@@ -16,6 +16,8 @@
  */
 package nu.muntea.pospai.models;
 
+import javax.jcr.Session;
+
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -23,8 +25,6 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import javax.jcr.Session;
 
 @Model(adaptables = {Resource.class, SlingHttpServletRequest.class})
 public class SampleRequestModel {
@@ -46,7 +46,7 @@ public class SampleRequestModel {
         Session session = resourceResolver.adaptTo(Session.class);
         LOGGER.trace("Found Session from Resolver: '{}'", session);
         if(session != null) {
-            answer = session.getUserID();
+            answer = session.getUserID() + " changed";
         }
         return answer;
     }
