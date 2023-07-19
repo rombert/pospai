@@ -16,4 +16,8 @@
     specific language governing permissions and limitations
     under the License.
 */ -->
-<div data-sly-resource="${resource.path}/jcr:content"></div>
+<sly data-sly-list.child="${resource.listChildren}">
+    <sly data-sly-resource="${child.path}"/>
+</sly>
+
+ 

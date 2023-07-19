@@ -18,8 +18,7 @@
     under the License.
 --><jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:primaryType="sling:Folder"
-          jcr:title="pospai Contact"
-          jcr:description="pospai Contact Page. This is a page where contact information can be added."
+          jcr:title="Contact"
           sling:resourceType="pospai/page"
 >
 </jcr:root>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root 
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="pospai/container">
+    <title jcr:primaryType="nt:unstructured"
+        title="Welcome to Pospai"
+        sling:resourceType="pospai/component/title"/>
+    <description jcr:primaryType="nt:unstructured"
+        text="Pospai is a sample application"
+        sling:resourceType="pospai/component/text"/>
+    <image jcr:primaryType="nt:unstructured"
+        src="https://sling.apache.org/res/logos/sling.svg"
+        sling:resourceType="pospai/component/image"/>        
+</jcr:root>
