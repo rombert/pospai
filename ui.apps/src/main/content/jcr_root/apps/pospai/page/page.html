@@ -22,9 +22,9 @@
     <sly data-sly-include="${'head.html'}"/>
 </head>
     <body>
-        <nav >
-            <a href="/content/pospai/home.html">Home</a>
-            <sly data-sly-unwrap data-sly-list.child="${resource.listChildren}">
+        <nav data-sly-use.nav="nu.muntea.pospai.models.NavModel">
+            <a href="${nav.websiteRoot.path}.html">${nav.websiteRoot.name}</a>
+            <sly data-sly-unwrap data-sly-list.child="${nav.navItems}">
                 | <a href="${child.path}.html">${child.name}</a>
             </sly>
         </nav>
