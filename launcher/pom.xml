@@ -22,7 +22,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>launcher</artifactId>
+    <artifactId>nu.muntea.pospai.launcher</artifactId>
 
     <name>pospai - Launcher</name>
     <description>

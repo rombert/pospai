@@ -1,13 +1,13 @@
 {
   "bundles": [
     {
-        "id": "nu.muntea.pospai/core/1.0-SNAPSHOT",
+        "id": "nu.muntea.pospai/nu.muntea.pospai.core/1.0-SNAPSHOT",
         "start-order": 20
     }
   ],
   "content-packages:ARTIFACTS|required": [
     {
-        "id":"nu.muntea.pospai/ui.apps/1.0-SNAPSHOT/zip"
+        "id":"nu.muntea.pospai/nu.muntea.pospai.ui.apps/1.0-SNAPSHOT/zip"
     }
   ]
 }

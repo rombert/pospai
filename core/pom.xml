@@ -28,7 +28,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>core</artifactId>
+    <artifactId>nu.muntea.pospai.core</artifactId>
     <packaging>bundle</packaging>
 
     <name>pospai - Core</name>
