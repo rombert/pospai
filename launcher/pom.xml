@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor 
+    license agreements. See the NOTICE file distributed with this work for additional 
+    information regarding copyright ownership. The ASF licenses this file to 
+    you under the Apache License, Version 2.0 (the "License"); you may not use 
+    this file except in compliance with the License. You may obtain a copy of 
+    the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
+    by applicable law or agreed to in writing, software distributed under the 
+    License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
+    OF ANY KIND, either express or implied. See the License for the specific 
+    language governing permissions and limitations under the License. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>pospai</artifactId>
+        <groupId>nu.muntea.pospai</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>launcher</artifactId>
+
+    <name>pospai - Launcher</name>
+    <description>
+        This is a Module which contains a sample feature model build, built on
+        top of the Sling Starter and adding this project's artifacts.
+    </description>
+
+    <properties>
+        <!-- versions to be replaced in the feature files -->
+        <!-- renovate: depName=org.ow2.asm:asm -->
+        <asm.version>9.5</asm.version>
+        <!-- renovate: depName=org.apache.jackrabbit:jackrabbit-jcr-commons -->
+        <jackrabbit.version>2.20.10</jackrabbit.version>
+        <!-- renovate: depName=org.apache.jackrabbit:oak-api -->
+        <oak.version>1.52.0</oak.version>
+        <!-- renovate: depName=org.slf4j:slf4j-api -->
+        <slf4j.version>1.7.36</slf4j.version>
+        <!-- renovate: depName=com.composum.nodes:composum-nodes-commons -->
+        <composum.nodes.version>4.2.1</composum.nodes.version>
+        <!-- renovate: depName=com.fasterxml.jackson.core:jackson-core -->
+        <jackson.version>2.15.2</jackson.version>
+        <!-- renovate: depName=org.codehaus.groovy:groovy -->
+        <groovy.version>4.0.10</groovy.version>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>slingfeature-maven-plugin</artifactId>
+                <extensions>true</extensions>
+
+                <configuration>
+                    <!-- TODO - read from starter pom -->
+                    <replacePropertyVariables>asm.version,jackrabbit.version,groovy.version,oak.version,slf4j.version,composum.nodes.version,jackson.version</replacePropertyVariables>
+                    <skipAddFeatureDependencies>true</skipAddFeatureDependencies>
+                    <aggregates>
+                        <aggregate>
+                            <classifier>app</classifier>
+                            <filesInclude>*.json</filesInclude>
+                            <filesInclude>oak/*.json</filesInclude>
+                            <filesInclude>oak/persistence/oak_persistence_sns.json</filesInclude>
+                            <filesInclude>app/*.json</filesInclude>
+                            <title>Sling With Oak Segment NS Persistence</title>
+                        </aggregate>
+                    </aggregates>
+                    <scans>
+                        <scan>
+                            <includeClassifier>app</includeClassifier>
+                        </scan>
+                    </scans>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>prepare-features</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>aggregate-features</goal>
+                            <goal>analyse-features</goal>
+                            <goal>attach-features</goal>
+                        </goals>
+                    </execution>
+               </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>prepare-feature-launcher</id>
+                        <goals>
+                            <goal>get</goal>
+                            <goal>copy</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <artifact>org.apache.sling:org.apache.sling.feature.launcher:${org.apache.sling.feature.launcher.version}</artifact>
+                            <stripVersion>true</stripVersion>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
