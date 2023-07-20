@@ -19,9 +19,15 @@
 <div data-sly-use.user="nu.muntea.pospai.models.UserModel">
     <h3>Comments</h3>
     
+    <sly data-sly-list.comment="${resource.children}">
+        <sly data-sly-resource="${comment}"/>
+    </sly>
+    
     <div data-sly-test="${user.userId}">
-        <form>
+        <form method="POST" action="${resource.path}/*">
             <textarea name="message" id="message" rows="10" cols="80" required minlength="5"></textarea><br>
+            <input type="hidden" name="createdBy" />
+            <input type="hidden" name="sling:resourceType" value="pospai/component/comment" />
             <input type="submit">
         </form>
         

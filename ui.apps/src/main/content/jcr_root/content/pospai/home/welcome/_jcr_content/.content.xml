@@ -15,5 +15,10 @@
         sling:resourceType="pospai/component/image"/>        
 
     <comments jcr:primaryType="nt:unstructured"
-        sling:resourceType="pospai/component/comments"/>
+        sling:resourceType="pospai/component/comments">
+        <foo jcr:primaryType="nt:unstructured"
+            sling:resourceType="pospai/component/comment"
+            message="hello"
+            createdBy="jane.kirby"/>
+    </comments>
 </jcr:root>
