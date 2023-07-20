@@ -13,4 +13,7 @@
     <image jcr:primaryType="nt:unstructured"
         src="https://sling.apache.org/res/logos/sling.svg"
         sling:resourceType="pospai/component/image"/>        
+
+    <comments jcr:primaryType="nt:unstructured"
+        sling:resourceType="pospai/component/comments"/>
 </jcr:root>
