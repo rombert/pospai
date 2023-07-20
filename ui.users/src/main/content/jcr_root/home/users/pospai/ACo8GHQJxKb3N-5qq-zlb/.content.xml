@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:User"
+    jcr:uuid="98edeaa6-9bd1-37de-a0e9-6b48eb096d84"
+    rep:authorizableId="bob.jones"
+    rep:password="\{SHA-256}10ae642203a9a786-1000-5598c76991717a12d106ea30ac66e18377dcadcbb28fb79c1cb236a3521ed06d"
+    rep:principalName="bob.jones"/>

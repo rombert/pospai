@@ -28,13 +28,12 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>nu.muntea.pospai.ui.apps</artifactId>
+    <artifactId>nu.muntea.pospai.ui.users</artifactId>
     <packaging>content-package</packaging>
 
-    <name>pospai - UI Apps</name>
+    <name>pospai - UI Users</name>
     <description>
-        This is an empty JCR Package where the JCR Content
-        can be deployed with.
+        Sample content package containing users and groups.
     </description>
     <!-- NOTE:
         For a 'not all' package this JCR Package will embedd
@@ -57,25 +56,11 @@
                 <groupId>org.apache.jackrabbit</groupId>
                 <artifactId>filevault-package-maven-plugin</artifactId>
                 <configuration>
+                    <accessControlHandling>overwrite</accessControlHandling>
+                    <packageType>content</packageType>
                     <filterSource>${basedir}/src/main/content/META-INF/vault/filter.xml</filterSource>
-                    <dependencies>
-                        <dependency>
-                            <groupId>nu.muntea.pospai</groupId>
-                            <artifactId>nu.muntea.pospai.ui.users</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>                   
-                    </dependencies>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    
-    <dependencies>
-        <dependency>
-            <groupId>nu.muntea.pospai</groupId>
-            <artifactId>nu.muntea.pospai.ui.users</artifactId>
-            <version>${project.version}</version>
-            <type>content-package</type>
-        </dependency>           
-    </dependencies>
 </project>
