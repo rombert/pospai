@@ -12,5 +12,6 @@
     {
         "id":"nu.muntea.pospai/nu.muntea.pospai.ui.apps/1.0-SNAPSHOT/zip"
     }
-  ]
+  ],
+  "repoinit:TEXT|true":"@file"
 }
