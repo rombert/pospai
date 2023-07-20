@@ -7,6 +7,9 @@
   ],
   "content-packages:ARTIFACTS|required": [
     {
+        "id":"nu.muntea.pospai/nu.muntea.pospai.ui.users/1.0-SNAPSHOT/zip"
+    },
+    {
         "id":"nu.muntea.pospai/nu.muntea.pospai.ui.apps/1.0-SNAPSHOT/zip"
     }
   ]

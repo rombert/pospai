@@ -2724,6 +2724,7 @@
     
     
     
+    <module>ui.users</module>
     <module>ui.apps</module>
               
     
@@ -2731,7 +2732,6 @@
     <module>launcher</module>
           
     
-    <module>all</module>
       
   </modules>
           
