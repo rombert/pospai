@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
     jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="rep:User"
     jcr:uuid="86cee7ae-45b6-311a-b0b9-7724d5e9e8cc"
     rep:authorizableId="jane.kirby"
     rep:password="\{SHA-256}65d4983dbcc76cdd-1000-817518b3bc52e406febe3c90fd1263886e575dc2fed56d52f23ab17d620dde7d"
-    rep:principalName="jane.kirby"/>
+    rep:principalName="jane.kirby">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        familyName="Kirby"
+        givenName="Jane"/>
+</jcr:root>

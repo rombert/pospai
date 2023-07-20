@@ -4,4 +4,5 @@
     jcr:primaryType="rep:Group"
     jcr:uuid="5d9449e8-d850-3c7e-a2cf-746c86e5dde3"
     rep:authorizableId="authors"
+    rep:members="{WeakReference}[98edeaa6-9bd1-37de-a0e9-6b48eb096d84,86cee7ae-45b6-311a-b0b9-7724d5e9e8cc]"
     rep:principalName="authors"/>

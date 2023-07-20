@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
     jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="rep:User"
     jcr:uuid="abba0b6f-f456-306b-ab66-baed93e6d9c4"
     rep:authorizableId="john.doe"
     rep:password="\{SHA-256}3b91641648c8ac78-1000-088577457efc1af31063ddeaae27c460afb6bc14674f3b4e71419ece73e4eedd"
-    rep:principalName="john.doe"/>
+    rep:principalName="john.doe">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        familyName="Doe"
+        givenName="John"/>
+</jcr:root>

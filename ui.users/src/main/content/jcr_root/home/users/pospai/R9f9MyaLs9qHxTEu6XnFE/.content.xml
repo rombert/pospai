@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
     jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="rep:User"
     jcr:uuid="3189ba12-d981-34bc-8950-08e42fb0dcc7"
     rep:authorizableId="kelly.wilson"
     rep:password="\{SHA-256}bf0a1f426bf0f838-1000-9e23fcfcf561db6c79f6b652ff900961ea6c6d549ff7cd4bc804be9500e86312"
-    rep:principalName="kelly.wilson"/>
+    rep:principalName="kelly.wilson">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        familyName="Wilson"
+        givenName="Kelly"/>
+</jcr:root>
