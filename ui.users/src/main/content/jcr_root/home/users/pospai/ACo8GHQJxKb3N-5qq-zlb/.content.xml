@@ -9,5 +9,7 @@
     <profile
         jcr:primaryType="nt:unstructured"
         familyName="Jones"
-        givenName="Bob "/>
+        givenName="Bob ">
+        <picture/>
+    </profile>
 </jcr:root>
