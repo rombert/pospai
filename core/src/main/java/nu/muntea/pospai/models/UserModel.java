@@ -49,7 +49,7 @@ public class UserModel {
     @SlingObject
     private Resource resource;
     
-    private String currentPage;
+    private Resource currentPage;
     private String userId;
     private String path;
     private String fullName;
@@ -60,14 +60,14 @@ public class UserModel {
     @PostConstruct
     public void loadUser() throws RepositoryException {
         
-        currentPage = resource.getPath();
+        currentPage = resource;
         Resource page = resource;
         while ( page != null && !"pospai/page".equals(page.getResourceType() ) ) {
             page = page.getParent();
         }
         
         if ( page != null )
-            currentPage = page.getPath();
+            currentPage = page;
         
         JackrabbitSession session = (JackrabbitSession) resource.getResourceResolver().adaptTo(Session.class);
         
@@ -114,7 +114,7 @@ public class UserModel {
         return profilePicturePath;
     }
     
-    public String getCurrentPage() {
+    public Resource getCurrentPage() {
         return currentPage;
     }
 }

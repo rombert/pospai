@@ -23,10 +23,10 @@
         <p>Path: ${user.path}</p>
         <p data-sly-test="${user.fullName}"}>Full name: ${user.fullName}</p>
         <p>Groups: ${user.groups}</p>
-        <p><a href="/system/sling/logout?resource=${user.currentPage}.html">Logout</a></p>
+        <p><a href="/system/sling/logout?resource=${user.currentPage.path}.html">Logout</a></p>
     </sly>
     
     <sly data-sly-test="${!user.userId}">
-        Please <a href="/system/sling/login?resource=${user.currentPage}.html">login</a> to view your profile page.
+        Please <a href="/system/sling/login?resource=${user.currentPage.path}.html">login</a> to view your profile page.
     </sly>
 </div>
