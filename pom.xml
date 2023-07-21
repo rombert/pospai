@@ -215,7 +215,6 @@
           <extensions>true</extensions>
           <configuration>
             <failOnMissingEmbed>true</failOnMissingEmbed>
-            <force>true</force>
           </configuration>
         </plugin>
         <plugin>
