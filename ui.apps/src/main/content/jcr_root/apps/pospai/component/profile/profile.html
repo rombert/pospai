@@ -19,7 +19,7 @@
 <div data-sly-use.user="nu.muntea.pospai.models.UserModel">
     <sly data-sly-test="${user.userId}">
         <h2>${user.userId}</h2>
-        <img data-sly-test="${user.profilePicturePath}" src="${user.profilePicturePath}" width="320">
+        <img src="/pospai/avatar.jpg/${user.userId}" width="320" alt="avatar for ${user.userId}">
         <p>Path: ${user.path}</p>
         <p data-sly-test="${user.fullName}"}>Full name: ${user.fullName}</p>
         <p>Groups: ${user.groups}</p>

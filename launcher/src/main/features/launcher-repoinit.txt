@@ -19,7 +19,15 @@
 
 # TODO - this allows users to modify random comments, not good
 
+create group users
+
 set ACL for users
     allow jcr:addChildNodes on /content restriction(rep:glob,*/comments)
     allow jcr:modifyProperties on /content restriction(rep:glob,*/comments/*)
+end
+
+create service user home-reader-service with path system/pospai
+set ACL for home-reader-service
+    allow jcr:read on /home/users
+    allow jcr:read on /content
 end

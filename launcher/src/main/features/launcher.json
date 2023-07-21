@@ -13,5 +13,12 @@
         "id":"nu.muntea.pospai/nu.muntea.pospai.ui.apps/1.0-SNAPSHOT/zip"
     }
   ],
+  "configurations": {
+        "org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~pospai":{
+            "user.mapping":[
+                "nu.muntea.pospai.core:avatar=[home-reader-service]"
+            ]
+        }  
+  },
   "repoinit:TEXT|true":"@file"
 }

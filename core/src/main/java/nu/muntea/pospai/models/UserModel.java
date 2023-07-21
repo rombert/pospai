@@ -55,8 +55,6 @@ public class UserModel {
     private String fullName;
     private List<String> groups = Collections.emptyList();
 
-    private String profilePicturePath;
-    
     @PostConstruct
     public void loadUser() throws RepositoryException {
         
@@ -88,10 +86,6 @@ public class UserModel {
         if ( familyName != null && givenName != null )
             this.fullName = String.format("%s %s", givenName[0].getString(), familyName[0].getString());
 
-        Resource profilePicture = resource.getResourceResolver().getResource(user.getPath()+"/profile/picture");
-        if ( profilePicture != null )
-            this.profilePicturePath = profilePicture.getPath();
-        
     }
     
     public String getUserId()  {
@@ -108,10 +102,6 @@ public class UserModel {
     
     public String getFullName() {
         return fullName;
-    }
-    
-    public String getProfilePicturePath() {
-        return profilePicturePath;
     }
     
     public Resource getCurrentPage() {
