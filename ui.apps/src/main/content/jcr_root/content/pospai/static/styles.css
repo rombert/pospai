@@ -17,30 +17,34 @@
  ~ under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+:root {
+    --primary-color: #6d7671;
+}
+
 body {
     margin: 1em 5%;
-    background-color: #fafafa;
-    font-family: sans-serif;
+    background-color: #eee;
+    font-family: 'Source Sans Pro', sans-serif;
     max-width: 1280px;
+}
+
+body, h1, h2, h3 {
+    color: #666;
 }
 
 img {
     max-width: calc(1280px - 4em);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: serif;
-}
-
 nav {
-    background-color: #6d7671;
-    border: 2px solid #6d7671;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
     padding: 0.5em;
     border-radius: 3px 3px 0 0;
 }
 
 nav, nav a  {
-    color: white;
+    color: #eee;
     text-decoration: none;
     font-size: 1.2em;
 }
@@ -55,7 +59,7 @@ nav, nav a  {
 }
 
 footer {
-    border-top: 2px solid #eeeeee;
+    border-top: 2px solid var(--primary-color);
     margin-top: 1em;
     padding: 1em;
     font-size: 0.8em;
