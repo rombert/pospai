@@ -31,3 +31,10 @@ set ACL for home-reader-service
     allow jcr:read on /home/users
     allow jcr:read on /content
 end
+
+create path (sling:OrderedFolder) /content/pospai(sling:Folder)/home
+
+create group authors
+set ACL for authors
+    allow jcr:write on /content/pospai/home
+end
