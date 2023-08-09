@@ -45,6 +45,7 @@ nav, nav a  {
 }
 
 .explanation {
+    margin-top: 1rem;
     font-style: italic;
 }
 
