@@ -11,13 +11,14 @@
     either express or implied. See the License for the specific language governing permissions
     and limitations under the License.
 -->
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          jcr:primaryType="sling:OrderedFolder"
-          jcr:title="Pospai"
-          jcr:description="Pospai is a demo application for Apache Sling that showcases a variety of features."
-          sling:resourceType="pospai/home"
->
-    <welcome />
-    <contact />
-    <profile />
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:description="Pospai is a demo application for Apache Sling that showcases a variety of features, including component-based rendering, access control using different groups, partial rendering and using the default servlets. It's not meant to necessarily showcase best practices, but instead to show how a variety of tasks can be achived by Apache Sling."
+    jcr:mixinTypes="[mix:lockable,rep:AccessControllable]"
+    jcr:primaryType="sling:OrderedFolder"
+    jcr:title="Pospai"
+    sling:resourceType="pospai/home">
+    <rep:policy/>
+    <welcome/>
+    <contact/>
+    <profile/>
 </jcr:root>

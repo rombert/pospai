@@ -16,9 +16,21 @@
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
---><jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          jcr:primaryType="sling:Folder"
-          jcr:title="Contact"
-          sling:resourceType="pospai/page"
->
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:Folder"
+    jcr:title="Contact"
+    sling:resourceType="pospai/page">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="pospai/container">
+        <title
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="pospai/component/title"
+            title="Contact"/>
+        <description
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="pospai/component/text"
+            text="This is a page where contact information can be added"/>
+    </jcr:content>
 </jcr:root>
