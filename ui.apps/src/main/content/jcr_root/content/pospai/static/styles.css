@@ -32,10 +32,6 @@ body, h1, h2, h3 {
     color: #666;
 }
 
-img {
-    max-width: 100%;
-}
-
 nav {
     background-color: var(--primary-color);
     border: 2px solid var(--primary-color);
