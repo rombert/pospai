@@ -21,6 +21,11 @@ body {
     margin: 1em 5%;
     background-color: #fafafa;
     font-family: sans-serif;
+    max-width: 1280px;
+}
+
+img {
+    max-width: calc(1280px - 4em);
 }
 
 h1, h2, h3, h4, h5, h6 {
