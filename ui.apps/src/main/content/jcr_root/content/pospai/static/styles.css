@@ -33,7 +33,7 @@ body, h1, h2, h3 {
 }
 
 img {
-    max-width: calc(1280px - 4em);
+    max-width: 100%;
 }
 
 nav {
