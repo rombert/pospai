@@ -17,4 +17,12 @@
     under the License.
 */ -->
 <!-- TODO - display the user's profile picture; might need AC setup . should we set up a system user that renders the avatars at a predictable path?-->
-<p><strong>${resource.createdBy}</strong>: ${resource.message}</p>
+<div style="display: flex">
+    <div style="margin-right: 0.5rem">
+        <img style="width: 64px; border-radius: 8px;" src="/pospai/avatar.jpg/${resource.createdBy}">
+    </div>
+    <div><strong>${resource.createdBy}</strong>
+        <div>${resource.message}</div>
+    </div>
+</div>
+<p></p>
