@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pospai
+spec:
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      containers:
+      - image: docker.io/rombert/pospai:latest
+        name: pospai
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /pospai/home.html
+            port: 8080
+        volumeMounts:
+        - name: data
+          mountPath: /opt/sling/launcher/repository
+      imagePullSecrets:
+      - name: docker.io
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: pospai-data
+

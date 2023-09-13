@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/app-root: /pospai/home.html
+spec:
+  rules:
+  - host: pospai.badkub.es
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: pospai
+            port:
+              number: 8080
+  tls:
+  - hosts:
+    - pospai.badkub.es
+    secretName: pospai.badkub.es-tls
