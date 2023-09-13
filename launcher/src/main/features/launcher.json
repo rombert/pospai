@@ -3,6 +3,30 @@
     {
         "id": "nu.muntea.pospai/nu.muntea.pospai.core/1.0-SNAPSHOT",
         "start-order": 20
+    },
+    {
+        "id": "io.prometheus/simpleclient/0.10.0",
+        "start-order": 20
+    },
+    {
+        "id": "io.prometheus/simpleclient_common/0.10.0",
+        "start-order": 20
+    },
+    {
+        "id": "io.prometheus/simpleclient_servlet/0.10.0",
+        "start-order": 20
+    },
+    {
+        "id": "io.prometheus/simpleclient_dropwizard/0.10.0",
+        "start-order": 20
+    },
+    {
+        "id": "io.prometheus/simpleclient_hotspot/0.10.0",
+        "start-order": 20
+    },
+    {
+        "id": "org.apache.sling/org.apache.sling.commons.metrics.prometheus/1.0-SNAPSHOT",
+        "start-order": 20
     }
   ],
   "content-packages:ARTIFACTS|required": [
