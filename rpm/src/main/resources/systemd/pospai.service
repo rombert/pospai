@@ -1,0 +1,12 @@
+[Unit]
+Description=Pospai
+After=network.target
+
+[Service]
+User=pospai
+WorkingDirectory=~
+Environment=APP_HOME=/usr/share/pospai
+ExecStart=/usr/share/pospai/bin/pospai-systemd.sh
+
+[Install]
+WantedBy=multi-user.target

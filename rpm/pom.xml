@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>pospai</artifactId>
+        <groupId>nu.muntea.pospai</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>nu.muntea.pospai.rpm</artifactId>
+    <packaging>rpm</packaging>
+    <name>pospai - RPM</name>
+    
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>nu.muntea.pospai.launcher</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>rpm-maven-plugin</artifactId>
+                <version>2.3.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <name>pospai</name>
+                    <group>Development</group>
+                    <requires>
+                        <require>java >= 17</require>
+                    </requires>
+                    <mappings>
+                        <!-- feature model launcher -->
+                        <mapping>
+                            <directory>/usr/share/pospai/launcher</directory>
+                            <sources>
+                                <source>
+                                    <location>../launcher/target/dependency/org.apache.sling.feature.launcher/</location>
+                                </source>
+                            </sources>
+                        </mapping>
+                        <!-- OSGi bundles, feature model files, etc -->
+                        <mapping>
+                            <directory>/usr/share/pospai/artifacts</directory>
+                            <sources>
+                                <source>
+                                    <location>../launcher/target/artifacts</location>
+                                </source>
+                            </sources>
+                        </mapping>
+                        <!-- work directory where persistent data is stored -->
+                        <mapping>
+                            <directory>/var/lib/pospai</directory>
+                            <dirmode>750</dirmode>
+                            <filemode>640</filemode>
+                            <username>pospai</username>
+                            <groupname>pospai</groupname>
+                        </mapping>
+                        <!-- systemd helper script -->
+                        <mapping>
+                            <directory>/usr/share/pospai/bin</directory>
+                            <dirmode>755</dirmode>
+                            <filemode>755</filemode>
+                            <sources>
+                                <source>
+                                    <location>${project.build.outputDirectory}/bin/pospai-systemd.sh</location>
+                                </source>
+                            </sources>
+                        </mapping>
+                        <!-- systemd unit -->
+                        <mapping>
+                            <directory>/etc/systemd/system</directory>
+                            <sources>
+                                <source>
+                                    <location>${project.build.outputDirectory}/systemd/pospai.service</location>
+                                </source>
+                            </sources>
+                        </mapping>
+                    </mappings>
+                    <!-- Create user and ensure the latest version of the systemd service is picked up -->
+                    <preinstallScriptlet>
+                        <script>
+                            getent passwd pospai || useradd --system --user-group --home-dir /var/lib/pospai pospai
+                            systemctl daemon-reload
+                        </script>
+                    </preinstallScriptlet>
+                </configuration>
+            </plugin>
+       </plugins>
+    </build>
+</project>
