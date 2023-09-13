@@ -414,6 +414,12 @@
         <module>rpm</module>
       </modules>
     </profile>
-  </profiles>
+    <profile>
+      <id>container</id>
+      <modules>
+        <module>container</module>
+      </modules>
+    </profile>
+   </profiles>
 
 </project>
