@@ -38,7 +38,7 @@
     <compiler.plugin.version>3.11.0</compiler.plugin.version>
     <bundle.plugin.version>5.1.9</bundle.plugin.version>
     <clean.plugin.version>3.3.1</clean.plugin.version>
-    <installer.plugin.version>3.0.0-M1</installer.plugin.version>
+    <installer.plugin.version>3.1.1</installer.plugin.version>
     <surfire.plugin.version>3.1.2</surfire.plugin.version>
     <failsafe.plugin.version>3.1.2</failsafe.plugin.version>
     <deploy.plugin.version>3.1.1</deploy.plugin.version>
