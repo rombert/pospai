@@ -27,5 +27,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+        server-id: github.pospai.snapshots
+        server-username: MAVEN_USERNAME
+        server-password: MAVEN_PASSWORD
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      env:
+        MAVEN_USERNAME: ${{ secrets.GH_POSPAI_PKG_USERNAME }}
+        MAVEN_PASSWORD: ${{ secrets.GH_POSPAI_PKG_TOKEN }}
