@@ -46,6 +46,8 @@
         <jackson.version>2.15.2</jackson.version>
         <!-- renovate: depName=org.codehaus.groovy:groovy -->
         <groovy.version>4.0.10</groovy.version>
+        <!-- set back to 1.29.0 unless you locally built the java agent -->
+        <otel.version>1.30.0-SNAPSHOT</otel.version>
     </properties>
     <build>
         <plugins>
@@ -122,6 +124,23 @@
                                             <replacement>org.apache.sling.feature.launcher</replacement>
                                         </org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
                                     </fileMappers>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>prepare-otel-agent</id>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>io.opentelemetry.javaagent</groupId>
+                                    <artifactId>opentelemetry-javaagent</artifactId>
+                                    <version>${otel.version}</version>
+                                    <outputDirectory>${build.directory}/agents</outputDirectory>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
