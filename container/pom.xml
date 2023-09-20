@@ -38,6 +38,20 @@
             <artifactId>nu.muntea.pospai.launcher</artifactId>
             <version>${project.version}</version>
         </dependency>
+        
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+    		<groupId>org.eclipse.parsson</groupId>
+    		<artifactId>parsson</artifactId>
+    		<version>1.1.4</version>
+    		<scope>test</scope>
+		</dependency>
+
     </dependencies>
 
     <build>
@@ -68,6 +82,15 @@
                         </image>
                     </images> 
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <configuration>
+					<environmentVariables>
+						<HTTP_PORT>${http.port}</HTTP_PORT>
+					</environmentVariables>
+				</configuration>
             </plugin>
        </plugins>
     </build>
