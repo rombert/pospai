@@ -154,7 +154,7 @@
                                     <groupId>io.opentelemetry.javaagent</groupId>
                                     <artifactId>opentelemetry-javaagent</artifactId>
                                     <version>${otel.version}</version>
-                                    <outputDirectory>${build.directory}/agents</outputDirectory>
+                                    <outputDirectory>${project.build.directory}/agents</outputDirectory>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
