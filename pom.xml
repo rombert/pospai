@@ -32,7 +32,7 @@
     <!-- plug-in versions -->
     <release.plugin.version>2.5.3</release.plugin.version>
     <source.plugin.version>3.3.0</source.plugin.version>
-    <resource.plugin.version>3.1.0</resource.plugin.version>
+    <resource.plugin.version>3.3.1</resource.plugin.version>
     <jar.plugin.version>3.1.1</jar.plugin.version>
     <enforcer.plugin.version>3.0.0-M2</enforcer.plugin.version>
     <compiler.plugin.version>3.11.0</compiler.plugin.version>
