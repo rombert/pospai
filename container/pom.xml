@@ -30,6 +30,7 @@
 
     <artifactId>nu.muntea.pospai.container</artifactId>
     <name>pospai - Container Image</name>
+    <packaging>docker</packaging>
     
     <dependencies>
         <dependency>
@@ -45,6 +46,7 @@
                 <groupId>io.fabric8</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.43.4</version>
+                <extensions>true</extensions>
                 <configuration>
                     <images>
                         <image>
