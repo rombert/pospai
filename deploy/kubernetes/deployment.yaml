@@ -21,7 +21,9 @@ spec:
           mountPath: /opt/sling/launcher/repository
         env:
         - name: OTEL_EXPORTER_OTLP_TRACES_ENDPOINT
-          value: https://k8s-monitoring-grafana-agent.sys-monitoring.svc.cluster.local:4317
+          value: http://k8s-monitoring-grafana-agent.sys-monitoring.svc.cluster.local:4317
+        - name: OTEL_METRICS_EXPORTER
+          value: none
       imagePullSecrets:
       - name: docker.io
       volumes:
