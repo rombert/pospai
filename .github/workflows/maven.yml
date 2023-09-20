@@ -35,3 +35,6 @@ jobs:
       env:
         MAVEN_USERNAME: rombert
         MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+    - name: Push Docker Image
+      if: ${{ github.ref == 'ref/head/master' }}
+      run: mvn -f container/pom.xml docker:push
