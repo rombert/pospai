@@ -47,7 +47,7 @@
         <!-- renovate: depName=org.codehaus.groovy:groovy -->
         <groovy.version>4.0.10</groovy.version>
         <!-- set back to 1.29.0 unless you locally built the java agent -->
-        <otel.version>1.30.0-SNAPSHOT</otel.version>
+        <otel.version>1.30.0</otel.version>
     </properties>
 
 
