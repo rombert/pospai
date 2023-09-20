@@ -58,9 +58,10 @@
                             <run>
 	                            <ports>http.port:8080</ports>
 	                            <wait>
-									<time>120000</time> <!-- 2 minutes -->
+									<time>180000</time> <!-- 3 minutes -->
 									<http>
 										<url>http://localhost:${http.port}/content/pospai/home/welcome.html</url>
+										<status>200</status>
 									</http>
 								</wait>
 							</run>
