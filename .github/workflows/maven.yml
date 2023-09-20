@@ -33,5 +33,5 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
       env:
-        MAVEN_USERNAME: ${{ secrets.GH_POSPAI_PKG_USERNAME }}
-        MAVEN_PASSWORD: ${{ secrets.GH_POSPAI_PKG_TOKEN }}
+        MAVEN_USERNAME: rombert
+        MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
