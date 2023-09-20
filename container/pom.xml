@@ -55,6 +55,15 @@
                                 <dockerFile>${project.basedir}/Dockerfile</dockerFile>
                                 <contextDir>${project.basedir}/../launcher/</contextDir>
                             </build>
+                            <run>
+	                            <ports>http.port:8080</ports>
+	                            <wait>
+									<time>120000</time> <!-- 2 minutes -->
+									<http>
+										<url>http://localhost:${http.port}/content/pospai/home/welcome.html</url>
+									</http>
+								</wait>
+							</run>
                         </image>
                     </images> 
                 </configuration>
