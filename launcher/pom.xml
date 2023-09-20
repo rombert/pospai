@@ -51,12 +51,12 @@
     </properties>
 
 
-    <!-- needed until metrics.prometheus gets released -->
+    <!-- needed until metrics.prometheus gets released and the otel-java PRs get merged-->
     <repositories>
         <repository>
-            <id>apache.snapshots</id>
-            <name>Apache Snapshot Repository</name>
-            <url>https://repository.apache.org/snapshots</url>
+            <id>github.pospai.snapshots</id>
+            <name>GitHub Pospai Snapshot Repository</name>
+            <url>https://maven.pkg.github.com/rombert/pospai</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
