@@ -30,6 +30,14 @@ jobs:
         server-id: github.pospai.snapshots
         server-username: MAVEN_USERNAME
         server-password: MAVEN_PASSWORD
+    - name: Cache local Maven repository
+      uses: actions/cache@v3
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}-${{ hashFiles('launcher/src/main/features/**/*.json') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          ${{ runner.os }}-maven-
     - name: Build with Maven
       run: mvn -B verify -P container --file pom.xml -Ddocker.start.wait.time=300000
       env:
