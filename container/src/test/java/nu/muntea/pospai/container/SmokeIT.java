@@ -1,13 +1,12 @@
 package nu.muntea.pospai.container;
 
-import static org.junit.Assert.assertThat;
+import static java.util.concurrent.TimeUnit.SECONDS;
+import static org.awaitility.Awaitility.await;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 
 import org.hamcrest.CoreMatchers;
@@ -20,16 +19,14 @@ public class SmokeIT {
 		
 		var httpClient = HttpClient.newHttpClient();
 		
-		String port = System.getenv("HTTP_PORT");
-		if ( port == null )
-			port = "8080";
+		String port = System.getenv("HTTP_PORT") != null ? System.getenv("HTTP_PORT") : "8080";
 		
-		var consoleRequest = HttpRequest.newBuilder()
-			.uri(URI.create("http://localhost:" + port + "/content/pospai/home/welcome.html")).build();
-		
-		HttpResponse<InputStream> bundleStatus = httpClient.send(consoleRequest, BodyHandlers.ofInputStream());
-		
-		assertThat("welcome page status code", bundleStatus.statusCode(), CoreMatchers.is(200));
+		await().atMost(30, SECONDS).until(() -> {
+			var consoleRequest = HttpRequest.newBuilder()
+					.uri(URI.create("http://localhost:" + port + "/content/pospai/home/welcome.html")).build();
+				
+				return httpClient.send(consoleRequest, BodyHandlers.ofInputStream()).statusCode();
+		}, CoreMatchers.is(200));
 	}
 
 }

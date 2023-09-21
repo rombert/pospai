@@ -44,6 +44,13 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+        
+        <dependency>
+            <groupId>org.awaitility</groupId>
+            <artifactId>awaitility</artifactId>
+            <version>4.2.0</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 
@@ -65,7 +72,7 @@
                             <run>
 	                            <ports>http.port:8080</ports>
 	                            <wait>
-									<time>180000</time> <!-- 3 minutes -->
+									<time>${docker.start.wait.time}</time>
 									<http>
 										<url>http://localhost:${http.port}/system/health.txt?tags=bundles,systemalive</url>
 										<status>200</status>
@@ -87,4 +94,8 @@
             </plugin>
        </plugins>
     </build>
+    
+    <properties>
+       <docker.start.wait.time>180000</docker.start.wait.time> <!-- 3 minutes -->
+    </properties>
 </project>
