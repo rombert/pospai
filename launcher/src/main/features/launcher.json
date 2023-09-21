@@ -42,7 +42,18 @@
             "user.mapping":[
                 "nu.muntea.pospai.core:avatar=[home-reader-service]"
             ]
-        }  
+        },
+    "org.apache.felix.hc.generalchecks.HttpRequestsCheck~pages":    {
+      "hc.tags":[
+        "content"
+      ],
+      "hc.name":"Well-known request paths return expected HTTP status",
+      "hc.mbean.name":"Initial content requests",
+      "requests":[
+        "/content/pospai/home/welcome.html => 200 && MATCHES <title>pospai.*</title>",
+        "/bin/browser.html => 401"
+      ]
+    }
   },
   "repoinit:TEXT|true":"@file"
 }

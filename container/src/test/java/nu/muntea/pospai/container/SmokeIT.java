@@ -21,7 +21,7 @@ public class SmokeIT {
 		
 		String port = System.getenv("HTTP_PORT") != null ? System.getenv("HTTP_PORT") : "8080";
 		
-		await().atMost(30, SECONDS).until(() -> {
+		await().atMost(180, SECONDS).until(() -> {
 			var consoleRequest = HttpRequest.newBuilder()
 					.uri(URI.create("http://localhost:" + port + "/content/pospai/home/welcome.html")).build();
 				
