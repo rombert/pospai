@@ -8,6 +8,10 @@
     {
       "matchDepTypes": ["build", "test"],
       "automerge": true
+    },
+    {
+       "matchPackageNames": ["docker.io/apache/sling"],
+       "enabled": false
     }
   ]
 }
