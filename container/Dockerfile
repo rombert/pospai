@@ -1,5 +1,5 @@
 FROM docker.io/apache/sling:snapshot AS starter
-FROM docker.io/eclipse-temurin:17
+FROM docker.io/eclipse-temurin:17@sha256:e3af901d39eba099b41209fbcacd6cebcd6a1f9479df4051b21b0b99ec3f7446
 
 EXPOSE 8080
 
