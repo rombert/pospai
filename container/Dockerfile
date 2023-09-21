@@ -1,5 +1,5 @@
 FROM docker.io/apache/sling:snapshot AS starter
-FROM docker.io/openjdk:17-slim
+FROM docker.io/eclipse-temurin:17
 
 EXPOSE 8080
 
