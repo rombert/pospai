@@ -44,13 +44,6 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
-        
-        <dependency>
-    		<groupId>org.eclipse.parsson</groupId>
-    		<artifactId>parsson</artifactId>
-    		<version>1.1.4</version>
-    		<scope>test</scope>
-		</dependency>
 
     </dependencies>
 
@@ -74,7 +67,7 @@
 	                            <wait>
 									<time>180000</time> <!-- 3 minutes -->
 									<http>
-										<url>http://localhost:${http.port}/content/pospai/home/welcome.html</url>
+										<url>http://localhost:${http.port}/system/health.txt?tags=bundles,systemalive</url>
 										<status>200</status>
 									</http>
 								</wait>
