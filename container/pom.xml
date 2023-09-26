@@ -101,4 +101,16 @@
     <properties>
        <docker.start.wait.time>180000</docker.start.wait.time> <!-- 3 minutes -->
     </properties>
+    
+    <profiles>
+		<profile>
+			<id>ci</id>
+			<properties>
+				<!-- wait longer in CI for the container to start -->
+				<docker.start.wait.time>300000</docker.start.wait.time>
+				<!-- disable otel agent in CI, it's not used -->
+				<docker.env.OTEL_JAVAAGENT_ENABLED>false</docker.env.OTEL_JAVAAGENT_ENABLED>
+			</properties>
+		</profile>
+	</profiles>
 </project>
