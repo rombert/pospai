@@ -74,7 +74,7 @@
 	                            <wait>
 									<time>${docker.start.wait.time}</time>
 									<http>
-										<url>http://localhost:${http.port}/system/health.txt?tags=bundles,systemalive,content</url>
+										<url>http://localhost:${http.port}/system/health.txt?tags=startup</url>
 										<status>200</status>
 									</http>
 								</wait>
