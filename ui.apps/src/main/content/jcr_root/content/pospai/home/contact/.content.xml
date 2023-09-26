@@ -10,9 +10,8 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="pospai/component/title"
             title="Contact"/>
-        <description
+        <location
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="pospai/component/text"
-            text="This is a page where contact information can be added"/>
+            sling:resourceType="pospai/component/maplocation"/>
     </jcr:content>
 </jcr:root>
