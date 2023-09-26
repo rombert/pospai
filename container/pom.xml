@@ -71,6 +71,9 @@
                             </build>
                             <run>
 	                            <ports>http.port:8080</ports>
+	                            <log>
+									<file>${project.build.directory}/docker-pospai.log</file>
+								</log>
 	                            <wait>
 									<time>${docker.start.wait.time}</time>
 									<http>
