@@ -25,13 +25,16 @@
     "configurations":{
         "org.apache.felix.hc.generalchecks.BundlesStartedCheck":{
             "hc.tags":[
-                "bundles"
-            ]
+                "bundles",
+                "startup"
+            ],
+            "useCriticalForInactive": true
         },
         "org.apache.sling.jcr.contentloader.hc.BundleContentLoadedCheck":{
             "hc.tags":[
                 "bundles",
-                "content-loading"
+                "content-loading",
+                "startup"
             ]
         },
         "org.apache.felix.hc.generalchecks.CpuCheck":{
@@ -52,7 +55,8 @@
         },
         "org.apache.felix.hc.generalchecks.FrameworkStartCheck":{
             "hc.tags":[
-                "systemalive"
+                "systemalive",
+                "startup"
             ],
             "targetStartLevel:Integer":"30"
         },
@@ -66,7 +70,8 @@
         },
         "org.apache.felix.hc.generalchecks.ServicesCheck":{
             "hc.tags":[
-                "systemalive"
+                "systemalive",
+                "startup"
             ],
             "services.list":[
                 "org.apache.sling.jcr.api.SlingRepository",
@@ -82,18 +87,6 @@
                 "cpu",
                 "system-resources"
             ]
-        },
-        "org.apache.felix.hc.core.impl.filter.ServiceUnavailableFilter~startupandshutdown":{
-            "osgi.http.whiteboard.filter.regex":"(?!/system/).*",
-            "avoid404DuringStartup":true,
-            "service.ranking:Integer":"2147483647",
-            "includeExecutionResult":false,
-            "osgi.http.whiteboard.context.select":"(osgi.http.whiteboard.context.name=*)",
-            "tags":[
-                "systemalive"
-            ],
-            "autoDisableFilter":true,
-            "responseTextFor503":"classpath:org.apache.sling.starter.content:startup/index.html"
         },
         "org.apache.felix.hc.core.impl.servlet.HealthCheckExecutorServlet~default":{
             "servletPath":"/system/health"
