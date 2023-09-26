@@ -9,7 +9,7 @@
         "start-order": 20
     },
     {
-        "id": "io.prometheus/simpleclient_common/0.10.0",
+        "id": "io.prometheus/simpleclient_common/0.16.0",
         "start-order": 20
     },
     {
