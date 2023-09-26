@@ -25,52 +25,23 @@
     "configurations":{
         "org.apache.felix.hc.generalchecks.BundlesStartedCheck":{
             "hc.tags":[
-                "bundles",
                 "startup"
             ],
             "useCriticalForInactive": true
         },
         "org.apache.sling.jcr.contentloader.hc.BundleContentLoadedCheck":{
             "hc.tags":[
-                "bundles",
-                "content-loading",
                 "startup"
-            ]
-        },
-        "org.apache.felix.hc.generalchecks.CpuCheck":{
-            "hc.tags":[
-                "cpu",
-                "system-resources"
-            ],
-            "cpuPercentageThresholdWarn":95
-        },
-        "org.apache.felix.hc.generalchecks.DiskSpaceCheck":{
-            "hc.tags":[
-                "diskspace",
-                "system-resources"
-            ],
-            "diskPaths":[
-                "."
             ]
         },
         "org.apache.felix.hc.generalchecks.FrameworkStartCheck":{
             "hc.tags":[
-                "systemalive",
                 "startup"
             ],
             "targetStartLevel:Integer":"30"
         },
-        "org.apache.felix.hc.generalchecks.MemoryCheck":{
-            "hc.tags":[
-                "memory",
-                "system-resources"
-            ],
-            "heapUsedPercentageThresholdCritical":100,
-            "heapUsedPercentageThresholdWarn":95
-        },
         "org.apache.felix.hc.generalchecks.ServicesCheck":{
             "hc.tags":[
-                "systemalive",
                 "startup"
             ],
             "services.list":[
@@ -79,13 +50,6 @@
                 "org.apache.sling.api.resource.ResourceResolverFactory",
                 "org.apache.sling.api.servlets.ServletResolver",
                 "javax.script.ScriptEngineManager"
-            ]
-        },
-        "org.apache.felix.hc.generalchecks.ThreadUsageCheck":{
-            "hc.tags":[
-                "threads",
-                "cpu",
-                "system-resources"
             ]
         },
         "org.apache.felix.hc.core.impl.servlet.HealthCheckExecutorServlet~default":{
