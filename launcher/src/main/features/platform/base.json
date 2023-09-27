@@ -11,6 +11,10 @@
             "start-order":"5"
         },
         {
+            "id":"org.owasp.encoder:encoder:1.2.3",
+            "start-order":"5"
+        },
+        {
             "id":"commons-collections:commons-collections:3.2.2",
             "start-order":"15"
         },
