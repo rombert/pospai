@@ -51,7 +51,7 @@
     </properties>
 
 
-    <!-- needed until metrics.prometheus gets released and the otel-java PRs get merged-->
+    <!-- needed until the otel-java PR gets merged-->
     <repositories>
         <repository>
             <id>github.pospai.snapshots</id>
