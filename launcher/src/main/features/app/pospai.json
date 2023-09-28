@@ -25,7 +25,7 @@
         "start-order": 20
     },
     {
-        "id": "org.apache.sling/org.apache.sling.commons.metrics.prometheus/1.0-SNAPSHOT",
+        "id": "org.apache.sling/org.apache.sling.commons.metrics.prometheus/0.1.0",
         "start-order": 20
     }
   ],
