@@ -31,7 +31,6 @@
        "groupName": "Apache PDFBox"
     },
     {
-      "matchPackagePatterns": [ "guava" ],
        "matchPackagePatterns": [ "io.opentelemetry.javaagent:opentelemetry-javaagent" ],
        "enabled": false
     },
