@@ -27,7 +27,11 @@
       "groupName": "Apache Felix HTTP"
     },
     {
-      "matchPackagePatterns": [ "guava" ],
+       "matchPackagePatterns": [ "io.opentelemetry.javaagent:opentelemetry-javaagent" ],
+       "enabled": false
+    },
+    {
+       "matchPackagePatterns": [ "guava" ],
        "enabled": false
     },
     {
