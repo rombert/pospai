@@ -27,6 +27,10 @@
       "groupName": "Apache Felix HTTP"
     },
     {
+       "matchPackagePrefixes": [ "org.apache.pdfbox:" ],
+       "groupName": "Apache PDFBox"
+    },
+    {
       "matchPackagePatterns": [ "guava" ],
        "enabled": false
     },
