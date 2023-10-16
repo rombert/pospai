@@ -53,19 +53,7 @@
             "start-order":"1"
         },
         {
-            "id":"org.apache.servicemix.bundles:org.apache.servicemix.bundles.saaj-impl:1.5.1_1",
-            "start-order":"1"
-        },
-        {
             "id":"org.apache.servicemix.specs:org.apache.servicemix.specs.jaxb-api-2.3:2.3_3",
-            "start-order":"1"
-        },
-        {
-            "id":"org.apache.servicemix.specs:org.apache.servicemix.specs.jaxws-api-2.2:2.9.0",
-            "start-order":"1"
-        },
-        {
-            "id":"org.apache.servicemix.specs:org.apache.servicemix.specs.saaj-api-1.3:2.9.0",
             "start-order":"1"
         },
         {
@@ -142,10 +130,6 @@
         },
         {
             "id":"org.apache.sling:org.apache.sling.settings:1.4.2",
-            "start-order":"1"
-        },
-        {
-            "id":"org.jvnet.staxex:stax-ex:1.8.3",
             "start-order":"1"
         },
         {
