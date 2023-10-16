@@ -35,10 +35,6 @@
        "enabled": false
     },
     {
-       "matchPackagePatterns": [ "guava" ],
-       "enabled": false
-    },
-    {
        "matchPackagePrefixes": [ "nu.muntea.pospai:" ],
        "enabled": false
     },
