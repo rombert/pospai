@@ -35,6 +35,10 @@
        "enabled": false
     },
     {
+       "matchPackagePrefixes": [ "nu.muntea.pospai:" ],
+       "enabled": false
+    },
+    {
       "matchManagers": ["maven"],
       "matchDepTypes": ["provided"],
       "enabled": false
