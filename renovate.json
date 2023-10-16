@@ -32,6 +32,15 @@
     },
     {
       "matchPackagePatterns": [ "guava" ],
+       "matchPackagePatterns": [ "io.opentelemetry.javaagent:opentelemetry-javaagent" ],
+       "enabled": false
+    },
+    {
+       "matchPackagePatterns": [ "guava" ],
+       "enabled": false
+    },
+    {
+       "matchPackagePrefixes": [ "nu.muntea.pospai:" ],
        "enabled": false
     },
     {
