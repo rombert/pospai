@@ -65,7 +65,7 @@
     <org.apache.sling.commons.osgi.version>2.4.0</org.apache.sling.commons.osgi.version>
     <jackrabbit-api.version>2.19.3</jackrabbit-api.version>
     <commons-lang3.version>3.9</commons-lang3.version>
-    <jmock-junit4.version>2.12.0</jmock-junit4.version>
+    <jmock-junit4.version>2.13.0</jmock-junit4.version>
     <sling.starter.version>12</sling.starter.version>
   </properties>
 
