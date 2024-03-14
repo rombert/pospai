@@ -43,7 +43,7 @@
         <!-- renovate: depName=com.composum.nodes:composum-nodes-commons -->
         <composum.nodes.version>4.2.3</composum.nodes.version>
         <!-- renovate: depName=com.fasterxml.jackson.core:jackson-core -->
-        <jackson.version>2.16.1</jackson.version>
+        <jackson.version>2.17.0</jackson.version>
         <!-- renovate: depName=org.codehaus.groovy:groovy -->
         <groovy.version>4.0.10</groovy.version>
         <!-- set back to 1.29.0 unless you locally built the java agent -->
