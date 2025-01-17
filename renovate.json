@@ -14,21 +14,8 @@
       "automerge": true
     },
     {
-       "matchPackageNames": ["docker.io/apache/sling"],
+       "matchPackagePrefixes": [ "nu.muntea.pospai:" ],
        "enabled": false
-    },
-    {
-      "matchPackagePrefixes": [ "org.apache.jackrabbit:" ],
-      "groupName": "Apache Jackrabbit and Jackrabbit Oak",
-      "allowedVersions": "/^[0-9]+\\.[0-9]*[02468]+\\.[0-9]+$/"
-    },
-    {
-      "matchPackagePrefixes": [ "org.apache.felix:org.apache.felix.http" ],
-      "groupName": "Apache Felix HTTP"
-    },
-    {
-       "matchPackagePrefixes": [ "org.apache.pdfbox:" ],
-       "groupName": "Apache PDFBox"
     },
     {
        "matchPackagePatterns": [ "io.opentelemetry.javaagent:opentelemetry-javaagent" ],
