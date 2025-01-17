@@ -41,7 +41,7 @@
     <installer.plugin.version>3.1.1</installer.plugin.version>
     <surfire.plugin.version>3.2.5</surfire.plugin.version>
     <failsafe.plugin.version>3.2.5</failsafe.plugin.version>
-    <deploy.plugin.version>3.1.1</deploy.plugin.version>
+    <deploy.plugin.version>3.1.3</deploy.plugin.version>
     <sling.plugin.version>2.4.2</sling.plugin.version>
     <dependency.plugin.version>3.6.1</dependency.plugin.version>
     <build.helper.plugin.version>3.5.0</build.helper.plugin.version>
