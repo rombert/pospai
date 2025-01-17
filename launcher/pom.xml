@@ -31,21 +31,8 @@
     </description>
 
     <properties>
-        <!-- versions to be replaced in the feature files -->
-        <!-- renovate: depName=org.ow2.asm:asm -->
-        <asm.version>9.6</asm.version>
-        <!-- renovate: depName=org.apache.jackrabbit:jackrabbit-jcr-commons -->
-        <jackrabbit.version>2.20.15</jackrabbit.version>
-        <!-- renovate: depName=org.apache.jackrabbit:oak-api -->
-        <oak.version>1.60.0</oak.version>
-        <!-- renovate: depName=org.slf4j:slf4j-api -->
-        <slf4j.version>1.7.36</slf4j.version>
-        <!-- renovate: depName=com.composum.nodes:composum-nodes-commons -->
-        <composum.nodes.version>4.3.1</composum.nodes.version>
-        <!-- renovate: depName=com.fasterxml.jackson.core:jackson-core -->
-        <jackson.version>2.17.0</jackson.version>
-        <!-- renovate: depName=org.codehaus.groovy:groovy -->
-        <groovy.version>4.0.10</groovy.version>
+        <!-- renovate: depName=org.apache.sling:org.apache.sling.starter -->
+        <sling.starter.version>13</sling.starter.version>
         <!-- set back to 1.29.0 unless you locally built the java agent -->
         <otel.version>1.30.0-SNAPSHOT</otel.version>
     </properties>
@@ -71,17 +58,32 @@
                 <extensions>true</extensions>
 
                 <configuration>
-                    <!-- TODO - read from starter pom -->
-                    <replacePropertyVariables>asm.version,jackrabbit.version,groovy.version,oak.version,slf4j.version,composum.nodes.version,jackson.version</replacePropertyVariables>
-                    <skipAddFeatureDependencies>true</skipAddFeatureDependencies>
+                   <skipAddFeatureDependencies>true</skipAddFeatureDependencies>
                     <aggregates>
                         <aggregate>
                             <classifier>app</classifier>
-                            <filesInclude>platform/*.json</filesInclude>
-                            <filesInclude>platform/oak/*.json</filesInclude>
-                            <filesInclude>platform/oak/persistence/oak_persistence_sns.json</filesInclude>
-                            <filesInclude>platform/app/*.json</filesInclude>
-                            <filesInclude>app/*.json</filesInclude>
+                            <filesInclude>*.json</filesInclude>
+                            <includeArtifact>
+                                <groupId>org.apache.sling</groupId>
+                                <artifactId>org.apache.sling.starter</artifactId>
+                                <classifier>nosample_base</classifier>
+                                <version>${sling.starter.version}</version>
+                                <type>slingosgifeature</type>
+                            </includeArtifact>
+                            <includeArtifact>
+                                <groupId>org.apache.sling</groupId>
+                                <artifactId>org.apache.sling.starter</artifactId>
+                                <classifier>oak_persistence_sns</classifier>
+                                <version>${sling.starter.version}</version>
+                                <type>slingosgifeature</type>
+                            </includeArtifact>
+                            <includeArtifact>
+                                <groupId>org.apache.sling</groupId>
+                                <artifactId>org.apache.sling.starter</artifactId>
+                                <classifier>composum</classifier>
+                                <version>${sling.starter.version}</version>
+                                <type>slingosgifeature</type>
+                            </includeArtifact>
                             <title>Sling With Oak Segment NS Persistence</title>
                         </aggregate>
                     </aggregates>
@@ -93,7 +95,13 @@
                     <repositories>
                         <repository>
                             <includeClassifier>app</includeClassifier>
-                            <includeClassifier>docker</includeClassifier>
+                            <includeArtifact>
+                                <groupId>org.apache.sling</groupId>
+                                <artifactId>org.apache.sling.starter</artifactId>
+                                <classifier>docker</classifier>
+                                <version>${sling.starter.version}</version>
+                                <type>slingosgifeature</type>
+                            </includeArtifact>
                         </repository>
                     </repositories>
                 </configuration>
