@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
-    "regexManagers:mavenPropertyVersions"
+    "customManagers:mavenPropertyVersions"
   ],
   "ignorePresets": [
     "workarounds:javaLTSVersions"
@@ -10,24 +10,37 @@
   "pinDigests": true,
   "packageRules": [
     {
-      "matchDepTypes": ["build", "test"],
+      "matchDepTypes": [
+        "build",
+        "test"
+      ],
       "automerge": true
     },
     {
-       "matchPackagePrefixes": [ "nu.muntea.pospai:" ],
-       "enabled": false
+      "enabled": false,
+      "matchPackageNames": [
+        "nu.muntea.pospai:{/,}**"
+      ]
     },
     {
-       "matchPackagePatterns": [ "io.opentelemetry.javaagent:opentelemetry-javaagent" ],
-       "enabled": false
+      "enabled": false,
+      "matchPackageNames": [
+        "/io.opentelemetry.javaagent:opentelemetry-javaagent/"
+      ]
     },
     {
-       "matchPackagePrefixes": [ "nu.muntea.pospai:" ],
-       "enabled": false
+      "enabled": false,
+      "matchPackageNames": [
+        "nu.muntea.pospai:{/,}**"
+      ]
     },
     {
-      "matchManagers": ["maven"],
-      "matchDepTypes": ["provided"],
+      "matchManagers": [
+        "maven"
+      ],
+      "matchDepTypes": [
+        "provided"
+      ],
       "enabled": false
     }
   ]
