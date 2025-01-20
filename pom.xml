@@ -47,7 +47,7 @@
     <build.helper.plugin.version>3.5.0</build.helper.plugin.version>
     <wcmio.plugin.version>2.1.6</wcmio.plugin.version>
     <filevault-package.plugin.version>1.4.0</filevault-package.plugin.version>
-    <slingfeature.plugin.version>1.8.0</slingfeature.plugin.version>
+    <slingfeature.plugin.version>1.9.0</slingfeature.plugin.version>
     <osgi.core.version>7.0.0</osgi.core.version>
     <osgi.annotation.version>7.0.0</osgi.annotation.version>
     <org.osgi.service.component.annotations.version>1.4.0</org.osgi.service.component.annotations.version>
