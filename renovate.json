@@ -4,9 +4,6 @@
     "config:recommended",
     "customManagers:mavenPropertyVersions"
   ],
-  "ignorePresets": [
-    "workarounds:javaLTSVersions"
-  ],
   "pinDigests": true,
   "packageRules": [
     {
