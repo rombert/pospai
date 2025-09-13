@@ -40,7 +40,7 @@
     <clean.plugin.version>3.5.0</clean.plugin.version>
     <installer.plugin.version>3.1.4</installer.plugin.version>
     <surfire.plugin.version>3.5.3</surfire.plugin.version>
-    <failsafe.plugin.version>3.5.3</failsafe.plugin.version>
+    <failsafe.plugin.version>3.5.4</failsafe.plugin.version>
     <deploy.plugin.version>3.1.4</deploy.plugin.version>
     <sling.plugin.version>2.4.2</sling.plugin.version>
     <dependency.plugin.version>3.8.1</dependency.plugin.version>
