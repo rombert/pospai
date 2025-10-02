@@ -43,7 +43,7 @@
     <failsafe.plugin.version>3.5.4</failsafe.plugin.version>
     <deploy.plugin.version>3.1.4</deploy.plugin.version>
     <sling.plugin.version>2.4.2</sling.plugin.version>
-    <dependency.plugin.version>3.8.1</dependency.plugin.version>
+    <dependency.plugin.version>3.9.0</dependency.plugin.version>
     <build.helper.plugin.version>3.6.1</build.helper.plugin.version>
     <wcmio.plugin.version>2.4.0</wcmio.plugin.version>
     <filevault-package.plugin.version>1.4.0</filevault-package.plugin.version>
