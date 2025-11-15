@@ -33,7 +33,7 @@
     <release.plugin.version>3.2.0</release.plugin.version>
     <source.plugin.version>3.3.1</source.plugin.version>
     <resource.plugin.version>3.3.1</resource.plugin.version>
-    <jar.plugin.version>3.4.2</jar.plugin.version>
+    <jar.plugin.version>3.5.0</jar.plugin.version>
     <enforcer.plugin.version>3.6.2</enforcer.plugin.version>
     <compiler.plugin.version>3.14.1</compiler.plugin.version>
     <bundle.plugin.version>6.0.0</bundle.plugin.version>
