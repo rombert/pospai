@@ -1,4 +1,4 @@
-FROM docker.io/apache/sling:13@sha256:8e6863f5b919a977e13e04edc0d46c9e77a33c7fcbdc82d7d0fd9625e7810984 AS starter
+FROM docker.io/apache/sling:14@sha256:517603ee5a795431672ac8552dbb27799c01ab92d2fd1f530e3f0124a59d05ba AS starter
 FROM docker.io/eclipse-temurin:21@sha256:03e5fbb9980a03e4b3d11676082650a4443108aaf1f7b7d9cc338171c5a90070
 
 EXPOSE 8080
